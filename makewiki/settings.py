@@ -31,13 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'wiki'
 ]
 
@@ -52,6 +52,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'makewiki.urls'
+
+
 
 
 TEMPLATES = [
@@ -129,6 +131,7 @@ STATIC_URL = '/static/'
 
 # wiki app settings
 WIKI_PAGE_TITLE_MAX_LENGTH = 600
+
 
 
 # Where to redirect during authentication
