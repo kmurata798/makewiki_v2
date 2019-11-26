@@ -23,12 +23,20 @@ CHALLENGES:
     2. Make sure Django doesn't give you any warnings or errors when you execute `python manage.py runserver`.
 """
 urlpatterns = [
+    # Wiki App
+    path('', include('wiki.urls')),
+
     # Admin Site
     path('admin/', admin.site.urls),
 
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
 
-    # Wiki App
-    path('', include('wiki.urls')),
+    path('api/', include('api.urls'))
+
 ]
+
+"""
+Test:
+    If the different urls link to the correct pages
+"""
