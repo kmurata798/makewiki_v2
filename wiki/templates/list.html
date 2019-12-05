@@ -1,6 +1,7 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% load static %}
 
 {% block content %}
+  <img src="{% static 'fishy.png' %}" style="width:400px; height:750px;" alt="My image">
   <h3>Wikis {% if pages %}<small class="text-muted">({{ pages|length }} Page{{ pages|length|pluralize:"s" }})</small>{% endif %}</h3>
   <hr>
   {% if pages %}

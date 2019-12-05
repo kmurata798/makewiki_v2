@@ -49,7 +49,6 @@ class PageListViewTests(TestCase):
             ordered=False
         )
 
-class PageDetailViewTests(TestCase):
     def test_load_detail_page(self):
         user = User.objects.create()
 
@@ -60,6 +59,6 @@ class PageDetailViewTests(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_page_creation(self):
-        user = User.objects.create()
+        response = self.client.get("/new_wiki/")
 
-        test_page = Page.ovjects.create(title="My Test Page", content="test", author=user, slug='my-test-page')
+        self.assertEqual(response.status_code, 200)
